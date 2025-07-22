@@ -1,0 +1,109 @@
+@import "modern-normalize";
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Inter", "Roboto", sans-serif;
+  height: 100vh;
+}
+
+:root.dark {
+  --color-base-bg: #121212;
+  --text-color: #f1f1f1;
+  --border-btn: 1px solid rgb(220, 220, 220);
+  --btn-bg: #1f1f1f;
+  --btn-bs: 0 4px 8px rgba(0, 0, 0, 0.7);
+  --btn-hover-bg: rgba(255, 255, 255, 0.1);
+  --focus-ring: rgba(255, 255, 255, 0.5);
+  --title-border: 1px solid white;
+  --book-bs: 0 6px 12px rgba(255, 255, 255, 0.1);
+}
+
+:root.light {
+  --color-base-bg: #f9f9f9;
+  --text-color: #1a1a1a;
+  --border-btn: 1px solid rgb(220, 220, 220);
+  --btn-bg: #f0f0f0;
+  --btn-bs: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --btn-hover-bg: rgba(0, 0, 0, 0.05);
+  --focus-ring: rgba(0, 0, 0, 0.3);
+  --book-bs: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: var(--color-base-bg);
+  color: var(--text-color);
+  padding: 10px;
+}
+
+.theme-toggle:hover {
+  cursor: pointer;
+}
+
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 5px 3px var(--focus-ring);
+  transition: box-shadow 0.3s ease;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+  box-shadow: var(--btn-bs);
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: var(--border-btn);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--btn-hover-bg);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.title {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff7e5f;
+  background-color: var(--title-bg);
+  width: 100px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 30px;
+  gap: 20px;
+}
+
+.title p {
+  margin: 0;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.book {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  height: 80px;
+  border: var(--title-border);
+  box-shadow: var(--book-bs);
+}
+
+.book .me {
+  background-color: #ff9900;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+}
