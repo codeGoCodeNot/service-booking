@@ -6,6 +6,8 @@
   font-size: 16px;
   font-family: "Inter", "Roboto", sans-serif;
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 :root.dark {
@@ -18,6 +20,7 @@
   --focus-ring: rgba(255, 255, 255, 0.5);
   --title-border: 1px solid white;
   --book-bs: 0 6px 12px rgba(255, 255, 255, 0.1);
+  --toggle-bg: #1e1e1e;
 }
 
 :root.light {
@@ -29,12 +32,15 @@
   --btn-hover-bg: rgba(0, 0, 0, 0.05);
   --focus-ring: rgba(0, 0, 0, 0.3);
   --book-bs: 0 6px 12px rgba(0, 0, 0, 0.3);
+  --toggle-bg: #e0e0e0;
 }
 
+html,
 body {
   background-color: var(--color-base-bg);
   color: var(--text-color);
-  padding: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 .theme-toggle:hover {
@@ -45,6 +51,17 @@ body {
   outline: none;
   box-shadow: 0 0 5px 3px var(--focus-ring);
   transition: box-shadow 0.3s ease;
+}
+
+.toggle-container {
+  background-color: var(--toggle-bg);
+  height: 100px;
+  width: 100%; /* full width */
+  margin: 0;
+  display: flex; /* optional, for better alignment */
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
 }
 
 button {
