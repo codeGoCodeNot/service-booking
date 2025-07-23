@@ -19,7 +19,7 @@ export const popUp = () => {
       <h3 class="popup-title">Book Now!</h3>
         <p><strong>No cancellations</strong> once booked — secure your spot confidently.</p>
         <p>Enjoy <strong>easy installment plans</strong> for your convenience!</p>
-        <p class="innerPara"><strong>⚡ Get 10% OFF</strong> for early reservations. Don’t miss out!</p>
+        <p class="innerPara"><strong>⚡ Get 10% OFF</strong> for early reservations. Don’t miss out! 💦💦💦</p>
         `;
 
       const closeBtn = document.createElement("button");
