@@ -262,6 +262,7 @@ footer {
   border: var(--popup-border);
   font-size: 1.5rem;
   font-family: "Inter", "Roboto";
+  text-align: center;
 }
 
 .popup-container:hover .popup {
@@ -313,4 +314,38 @@ footer {
 .pay-btn:hover {
   transform: scale(1.05);
   opacity: 0.9;
+}
+
+.ads-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ads-popup {
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.close-ad {
+  position: absolute;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1;
+  left: 67%;
+  width: 25px;
+  height: 25px;
+}
+
+.close-ad:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+img {
+  width: 800px;
+  height: 300px;
+  margin-bottom: 100px;
 }

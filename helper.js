@@ -31,8 +31,8 @@ export const popUp = () => {
 
       const payBtn = document.createElement("button");
       payBtn.classList.add("pay-btn");
-      payBtn.textContent = "Pay here";
-      payBtn.style.width = "120px";
+      payBtn.textContent = "Pay";
+      payBtn.style.width = "100px";
 
       popup.append(payBtn);
       popup.append(closeBtn);
