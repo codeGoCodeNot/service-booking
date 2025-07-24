@@ -5,4 +5,8 @@ import { showAd, closeAds } from "./ads.js";
 document.querySelector(".theme-toggle").addEventListener("click", themeToggle);
 popUp();
 closeAds();
+
 showAd();
+setInterval(() => {
+  showAd();
+}, 20000);

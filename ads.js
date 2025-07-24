@@ -23,10 +23,19 @@ const ads = [
   },
 ];
 
+let adVisible = false;
+let currentAd = null;
+
 export const showAd = () => {
-  const randomIndex = Math.floor(Math.random() * ads.length);
-  const selectAd = ads[randomIndex];
-  adImg.src = selectAd.img;
+  if (adVisible) return;
+  adVisible = true;
+
+  if (!currentAd) {
+    const randomIndex = Math.floor(Math.random() * ads.length);
+    currentAd = ads[randomIndex];
+  }
+
+  adImg.src = currentAd.img;
   adImg.onclick = () => window.open(selectAd.link, "_blank");
 
   adsPopup.style.display = "block";
@@ -44,6 +53,8 @@ export const closeAds = () => {
       adsPopup.style.display = "none";
     }
 
+    adVisible = false;
+    currentAd = null;
     event.preventDefault();
   });
 };
